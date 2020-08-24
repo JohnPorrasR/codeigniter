@@ -1,0 +1,17 @@
+{
+    "description": "NOE",
+    "name": "NOE",
+    "type": "proyect",
+    "license": "MIT",
+    "required": {
+      "pfp": ">=5.3.7",
+      "philo/laravel-blade": "^2.0"
+    },
+    "required-dev": {
+  
+    },
+    "require": {
+      "philo/laravel-blade": "2.*"
+    }
+  }
+  
