@@ -27,13 +27,13 @@ class Model_home extends CI_Model
     {
         $where = array();
         $where["n_id_usuario"] = $data["n_id_usuario"];
-        if ($this->Model_util->Existe($where, "tbm_usuarios") != false) {
-            $update = $this->Model_util->update("tbm_usuarios", $data, $where);
+        if ($this->Model_util->Existe($where, "firma_electronica.tbm_usuarios") != false) {
+            $update = $this->Model_util->update("firma_electronica.tbm_usuarios", $data, $where);
             if ($update == true) {
-                $id = $this->Model_util->Existe($where, "tbm_usuarios")["n_id_usuario"];
+                $id = $this->Model_util->Existe($where, "firma_electronica.tbm_usuarios")["n_id_usuario"];
             }
         } else {
-            $id = $this->Model_util->save("tbm_usuarios", $data);
+            $id = $this->Model_util->save("firma_electronica.tbm_usuarios", $data);
         }
         return $id;
     }

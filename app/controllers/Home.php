@@ -20,7 +20,7 @@ class Home extends MY_Controller
     public function login()
     {
         $msg = array();
-        $data = $this->user->Get_user($_POST);
+        $data = $this->user->obtener_usuario($_POST);
         if ($data)
         {
             if ($data['m_estado'] == 0)
@@ -29,9 +29,17 @@ class Home extends MY_Controller
                 $msg["text"] = "Su usuario se encuentra bloqueado.";
                 echo json_encode($msg);die;
             }
+            $server = $this->user->obtener_server();
+
+            if(count($server) > 0)
+            {
+                $url = $server['x_url'];
+            }else{
+                $url = base_url();
+            }
             $this->session->set_userdata(
                 array(
-                    "usu" => $data['x_usuario'], "id" => $data['n_id_usuario'], "nomb" => $data['x_mostrar_nomb'], "correo" => $data['x_correo']
+                    "usu" => $data['x_usuario'], "id" => $data['n_id_usuario'], "nomb" => $data['x_mostrar_nomb'], "base_url" => $url
                 )
             );
             $msg["resp"] = 100;

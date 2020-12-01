@@ -14,14 +14,14 @@
     <!-- fin cambio de clave -->
 
 
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/jekyll-search.min.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/daterangepicker/moment.min.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="<?php echo base_url() ?>resource/app/assets/js/sleek.bundle.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/jekyll-search.min.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/daterangepicker/moment.min.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/js/sleek.bundle.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#btnCambiarClave").click(function(){

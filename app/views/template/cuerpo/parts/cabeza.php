@@ -11,9 +11,9 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user-menu">
                     <button class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
-                        <img alt="User Image" class="user-image" src="<?php echo base_url() ?>resource/app/assets/img/user/user.png"/>
+                        <img alt="User Image" class="user-image" src="<?= @$this->session->userdata('base_url') ?>resource/app/assets/img/user/user.png"/>
                         <span class="d-none d-lg-inline-block">
-                            <?= @$this->session->userdata('correo') ?>
+                            <?= @$this->session->userdata('nomb') ?>
                         </span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right">
