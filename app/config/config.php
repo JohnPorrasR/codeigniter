@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
  */
 
-$config['base_url'] = 'http://localhost:8000/';
+$config['base_url'] =  'http://localhost:82/html/php/Investigacion/Plantilla/';// 'http://localhost:8000/';
 
 /*$server = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . "/fe";
 if ($_SERVER['REMOTE_ADDR'] == "127.0.0.1") {

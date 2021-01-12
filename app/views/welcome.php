@@ -34,7 +34,7 @@
         <div class="page-wrapper">
             <?php include("template/fe/parts/cabeza.php"); ?>
             <div class="content-wrapper">
-                <div class="content">                    
+                <div class="content">
                     <div class="card card-default">
                         <div class="card-header card-header-border-bottom">
                             <h2>Seleccione el modulo</h2>
@@ -114,7 +114,7 @@
                     flag = false;
                     $("#divAlert").show();
                     $("#divAlert").addClass('alert-danger');
-                    $("#divAlert").text("Los textos ingresados deben ser iguales."); 
+                    $("#divAlert").text("Los textos ingresados deben ser iguales.");
                 }
                 if(flag = true){
                     var data = new FormData();

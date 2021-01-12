@@ -1,13 +1,8 @@
-<footer class="footer mt-auto">
-    <div class="copyright bg-white">
-        <p>
-            © <span id="copy-year"><?= date('d-m-Y'); ?></span>
-            @johnporrasr Copyright.
-        </p>
+<!-- footer content -->
+<footer>
+    <div class="pull-right">
+        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
     </div>
-    <script>
-        var d = new Date();
-        var year = d.getFullYear();
-        document.getElementById("copy-year").innerHTML = year;
-    </script>
+    <div class="clearfix"></div>
 </footer>
+<!-- /footer content -->

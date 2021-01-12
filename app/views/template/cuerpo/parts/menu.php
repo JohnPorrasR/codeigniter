@@ -1,47 +1,39 @@
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="<?= base_url() ?>home/cpanel" class="site_title"><i class="fa fa-paw"></i> <span><?= @$this->session->userdata('sistema') ?></span></a>
+        </div>
 
-        <aside class="left-sidebar bg-sidebar">
-            <div class="sidebar sidebar-with-footer" id="sidebar">
-                <div class="app-brand">
-                    <a href="<?= @$this->session->userdata('base_url') ?>">
-                        <svg class="brand-icon" height="33" preserveaspectratio="xMidYMid" viewbox="0 0 30 33" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <g fill="none" fill-rule="evenodd">
-                                <path class="logo-fill-blue" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" fill="#7DBCFF">
-                                </path>
-                                <path class="logo-fill-white" d="M11 4v25l8 4V0z" fill="#FFF">
-                                </path>
-                            </g>
-                        </svg>
-                        <span class="brand-name">
-                            FE
-                        </span>
-                    </a>
-                </div>
-                <div class="sidebar-scrollbar">
-                    <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li class="has-sub expand">
-                            <a aria-controls="bandeja" aria-expanded="true" class="sidenav-item-link" data-target="#bandeja" data-toggle="collapse" href="javascript:void(0)">
-                                <i class="mdi mdi mdi-folder-multiple-outline"></i>
-                                <span class="nav-text">Bandeja</span>
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="collapse show" data-parent="#sidebar-menu" id="bandeja" style="">
-                                <div class="sub-menu">
-                                    <li>
-                                        <a class="sidenav-item-link" href="http://173.212.194.231/fe/bandeja/receptor">
-                                                        <span class="nav-text">
-                                                            Receptor                                                        </span>
-                                        </a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <hr class="separator"/>
-                <div class="sidebar-footer">
-                    <div class="sidebar-footer-content">
+        <div class="clearfix"></div>
+        <br />
 
-                    </div>
-                </div>
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+                <?php foreach (@$this->session->userdata('menu_n1') as $k1 => $d1){ ?>
+                     <h3><?= $d1["x_modulo_desc"] ?></h3>
+                     <ul class="nav side-menu">
+                     <?php foreach (@$this->session->userdata('menu_n2') as $k2 => $d2){ ?>
+                         <?php if($d1["n_id_modulo"] == $d2["m_modulo_id"]): ?>
+                         <li><a><i class="<?= $d2["x_etiqueta"] ?>"></i> <?= $d2["x_modulo_desc"] ?> <span class="fa fa-chevron-down"></span></a>
+                             <ul class="nav child_menu">
+                             <?php foreach (@$this->session->userdata('menu_n3') as $k3 => $d3){ ?>
+                                 <?php if($d2["n_id_modulo"] == $d3["m_modulo_id"]): ?>
+                                 <li><a href="<?= base_url().$d2["x_url"].'/'.$d3["x_url"] ?>"><?= $d3["x_modulo_desc"] ?></a></li>
+                                 <?php endif ?>
+                             <?php } ?>
+                             </ul>
+                         </li>
+                         <?php endif ?>
+                     <?php } ?>
+                     </ul>
+                <?php } ?>
+                <br />
             </div>
-        </aside>  
+
+        </div>
+        <!-- /sidebar menu -->
+
+    </div>
+</div>
